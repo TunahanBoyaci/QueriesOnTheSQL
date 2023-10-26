@@ -1,0 +1,12 @@
+select * from sakila.payment;
+select * from sakila.payment where customer_id = 1;
+select * from sakila.payment where customer_id = 1 or customer_id = 2;
+select * from sakila.payment where customer_id = 1 and staff_id = 1;
+select * from sakila.payment where (customer_id = 1 or customer_id = 2) and staff_id = 1;
+select sum(amount) from sakila.payment where customer_id = 1;
+select * from sakila.payment where amount >= 5;
+select * from sakila.payment where amount >= 5 limit 10;
+select * from sakila.payment where amount >= 5 limit 10,10;
+select * from sakila.payment where customer_id in (1,2,3);
+select * from sakila.payment where customer_id between 1 and 3;
+select * from sakila.payment where customer_id <> 1;
